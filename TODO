@@ -1,0 +1,27 @@
+Interface:
+
+REQUIRES PATCH - exclude conky from opactiy rule: not currently possible, will need to make a pull request
+N/A - toggle opacity rule or blur background of opaque window
+REQUIRES PATCH - wallpaper fade in: couple of ideas on this one. 1. use hsetroot to somehow generate a fading background or 2. use xscreensaver to put up a black screen and then fade out when everything is loaded. 3 have a look at transset 4 pull request in compton
+DONE... - openbox quiet grey background (done, edit /usr/lib/openbox/openbox-autostart and comment out everything except the parts relevant to local config)
+- the logout GUI on the openbox wiki
+- window snapping
+
+
+System: 
+
+- compositing: figure out a way to have transparent inactive windows, but transparent openbox menu
+- turn off keybinding for shutdown i.e. ctrl+Esc / fn+Esc
+- widget for wireless connect
+- widget for expressvpn (might have to write that myself)
+DONE... - fix nvidia video thing: if hdmi plugged in on boot, screen opens in extended mode instead of duplicate mode. 
+- hotplug nvidia and HDMI
+- CONSIDER USING THE DISPLAY PORT INSTEAD OF THE HDMI
+
+
+rEFInd:
+
+- fix logos for other entries (turn on hints when you restart after upgrading system)
+- graphical login tool for encrypted LVM partition (sd-encrypt) try plymouth
+- install efi binary tools to the EFI partition: shell, gdisk, memtest, fwupdate, firmware
+
