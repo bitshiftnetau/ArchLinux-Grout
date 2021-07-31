@@ -17,4 +17,4 @@ if [[ ! $DISPLAY && $XDG_VTNR -eq 1 ]]; then
 fi
 
 export PATH=$PATH:/home/access/.gem/ruby/2.6.0/bin
-transmission-daemon
+export I3_BLOCKS_SCRIPT_DIR=/etc/git/dotfiles/ArchLinux-Grout/i3blocks-scripts
