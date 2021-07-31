@@ -8,10 +8,10 @@
 - Initramfs: Systemd 
 - Encryption: LUKS on LVM
 
-***We are using rEFInd because from memory gummitboot is not compatible with UEFI (please correct me if that is wrong).***
+***We are using rEFInd because from memory sytemd-boot is not compatible with LVM on Luks***
 
 ## Systemd services:
-- ~~Systemd-networkd~~ (currently troubleshooting unknown issue with VLANs)
+- ~~Systemd-networkd~~ (currently troubleshooting unknown issue with VLANs, I am currently adding my vlans manually using `ip` and addresses with `dhcpcd` but use systemd-networkd if VLANs are not a requirement for your system)
 - automount: udiskie
 - RAID: mdadm
 - RDP server: xrdp
@@ -71,7 +71,6 @@
 - cascaydia-code-fonts
 - freetype2
 - ttf-nerd-fonts-symbols
-- 
 
 ## Miscellaneous Applications:
 - RDP/SPICE/XVNC client: Remmina + freerdp
@@ -88,7 +87,6 @@
 - minecraft-launcher
 - nautilus
 - neofetch
-- 
 
 ## Utilities:
 - bindutils
@@ -140,7 +138,7 @@
 ### Installation options:
 
 1. Manually follow the instructions below
-2. ~~Run the script attached~~ ***(coming soon)***
+2. ~~Run the script attached~~ ***(hopefully coming soon)***
 
 
 # Installation
