@@ -447,6 +447,28 @@ After installing, rebuild your initramfs
 If you are getting a poor resolution, then we either need to add 'i915' to the modules section of mkinitcpio and then rebuild, or enable KMS which is a whole other task in itself
 
 
+### Automounting:
+
+`$ pacman -S udisks2 udiskie`
+
+Configuration should be ready to go out of the box and running udiskie should already be in the provided `.xinitrc` file in this repo.
+
+
+### i3blocks:
+
+<to be filled>
+
+
+### rofi:
+
+<to be filled>
+
+
+### compton:
+
+<to be filled>
+
+
 ### Linking configs from this repo
 
 Clone this repo into wherever you want, I chose /etc/git/dotfiles
@@ -456,12 +478,6 @@ Clone this repo into wherever you want, I chose /etc/git/dotfiles
  `$ ln -s /etc/git/dotfiles/ArchLinux-Grout/.config ~/.config`
  `$ ln -s /etc/git/dotfiles/ArchLinux-Grout/X/.xinitrc ~/.xinitrc`
 
-
-### Automounting:
-
-`$ pacman -S udisks2 udiskie`
-
-Configuration should be ready to go out of the box and running udiskie should already be in the provided `.xinitrc` file in this repo.
 
 ### Vim
 
