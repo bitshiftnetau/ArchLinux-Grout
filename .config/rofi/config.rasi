@@ -1,0 +1,40 @@
+configuration {
+	display-drun: "";
+	display-run: "";
+	display-window: "";
+	display-ssh: "~#";
+	show-icons: true;
+	sidebar-mode: false;
+}
+
+* {
+    background-color:      #2f343f;
+    text-color:            White;
+    border-color:          White;
+    font:                 "DejaVu Sans Mono 10";
+}
+
+window {
+    width:      10%;
+    padding:    15px;
+}
+
+listview {
+    spacing:    5px;
+    lines:      5;
+}
+
+entry {
+    expand:     false;
+    width:      10em;
+}
+
+element {
+    padding: 5px 5px;
+}
+element selected {
+    background-color: #6a10bb;
+}
+
+
+

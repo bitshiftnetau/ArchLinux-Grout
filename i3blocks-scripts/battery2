@@ -12,7 +12,7 @@ status = check_output(['acpi'], universal_newlines=True)
 
 if not status:
     # stands for no battery found
-    fulltext = "<span color='red'><span font='FontAwesome'>\uf00d \uf240</span></span>"
+    fulltext = "<span color='red'><span font='FontAwesome'></span></span>"
     percentleft = 100
 else:
     # if there is more than one battery in one laptop, the percentage left is 
@@ -49,26 +49,24 @@ else:
         percentleft = 0
 
     # stands for charging
-    FA_LIGHTNING = "<span color='yellow'><span font='FontAwesome'>\uf0e7</span></span>"
+    FA_LIGHTNING = "<span color='yellow'><span font='FontAwesome'>⚡</span></span>"
 
     # stands for plugged in
-    FA_PLUG = "<span font='FontAwesome'>\uf1e6</span>"
+    FA_PLUG = "<span font='FontAwesome'>🔌</span>"
+
+    # stands for full batter
+    FA_FULL = "<span font='FontAwesome'></span>"
 
     # stands for using battery
-    FA_BATTERY = "<span font='FontAwesome'>\uf240</span>"
+    FA_BATTERY = "<span font='FontAwesome'></span>"
 
     # stands for unknown status of battery
-    FA_QUESTION = "<span font='FontAwesome'>\uf128</span>"
-
+    FA_QUESTION = "<span font='FontAwesome'></span>"
 
     if state == "Discharging":
         fulltext = FA_BATTERY + " "
-    elif state == "Full":
-        fulltext = FA_PLUG + " "
-        timeleft = ""
     elif state == "Unknown":
-        fulltext = FA_QUESTION + " " + FA_BATTERY + " "
-        timeleft = ""
+        fulltext = FA_QUESTION + " "
     else:
         fulltext = FA_LIGHTNING + " " + FA_PLUG + " "
 
@@ -92,8 +90,34 @@ else:
             return "#FFFF66"
         return "#FFFFFF"
 
-    form =  '<span color="{}">{}%</span>'
-    fulltext += form.format(color(percentleft), percentleft)
+    def level(percent):
+        if percent < 10:
+            # exit code 33 will turn background red
+            return ""
+        if percent < 20:
+            return ""
+        if percent < 30:
+            return ""
+        if percent < 40:
+            return ""
+        if percent < 50:
+            return ""
+        if percent < 60:
+            return ""
+        if percent < 70:
+            return ""
+        if percent < 80:
+            return ""
+        if percent < 90:
+            return ""
+        if percent < 100:
+            return ""
+        return ""
+
+
+
+    form =  '<span color="{}">{} {}%</span>'
+    fulltext += form.format(color(percentleft), level(percentleft), percentleft)
     fulltext += timeleft
 
 print(fulltext)

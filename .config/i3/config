@@ -159,15 +159,27 @@ bindsym $mod+a focus parent
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
-set $ws1 "1: "
-set $ws2 "2: "
-set $ws3 "3: "
-set $ws4 "4: "
-set $ws5 "5: "
-set $ws6 "6"
-set $ws7 "7"
-set $ws8 "8"
-set $ws9 "9: "
+set $ws1 " - 🔑"
+set $ws2 " - "
+set $ws3 " - 🌐"
+set $ws4 " - 🌐"
+set $ws5 " - "
+set $ws6 ""
+set $ws7 ""
+set $ws8 ""
+set $ws9 " - "
+
+# Misc Icons
+# 🌐 📆 
+# 🌑🌒🌓🌔🌕🌖🌗🌘🌑
+# 📊🔀🔑⚡⟰⟱ ⤊ ⤋ ⥯ 🔐
+#    
+# 
+#   
+# 
+#  
+# #
+
 
  # workspace 2: # workspace 3: 
 # workspace 4: 
