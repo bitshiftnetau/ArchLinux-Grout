@@ -1,5 +1,10 @@
 # BUILDING ARCH MACHINE: 
 
+TODO:
+- add linkage for systemd-networkd files using VLANs
+- add rofi/picom/i3blocks config/instructions
+- 
+
 ## System design
 
 - Firmware mode: UEFI + rEFInd
@@ -11,7 +16,7 @@
 ***We are using rEFInd because from memory sytemd-boot is not compatible with LVM on Luks***
 
 ## Systemd services:
-- ~~Systemd-networkd~~ (currently troubleshooting unknown issue with VLANs, I am currently adding my vlans manually using `ip` and addresses with `dhcpcd` but use systemd-networkd if VLANs are not a requirement for your system)
+- Systemd-networkd
 - automount: udiskie
 - RAID: mdadm
 - RDP server: xrdp
