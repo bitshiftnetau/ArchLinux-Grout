@@ -1,8 +1,8 @@
 configuration {
-	display-drun: "";
-	display-run: "";
-	display-window: "";
-	display-ssh: "~#";
+	display-drun: " ";
+	display-run: " ";
+	display-window: " ";
+	display-ssh: " ";
 	show-icons: true;
 	sidebar-mode: false;
 }
@@ -10,8 +10,7 @@ configuration {
 * {
     background-color:      #2f343f;
     text-color:            White;
-    border-color:          White;
-    font:                 "DejaVu Sans Mono 10";
+    font:                 "DejaVu Sans Mono 12";
 }
 
 window {

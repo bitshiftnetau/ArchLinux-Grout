@@ -58,7 +58,7 @@ bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 
 # Apply lock screen when putting machine to sleep
-bindsym XF86Sleep exec i3lock --color "$bg-color"
+bindsym XF86Sleep exec /etc/git/dotfiles/ArchLinux-Grout/.config/i3/wakeupconfig.sh #i3lock --color "$bg-color"
 #bindsym $mod+l exec i3lock --color "$bg-color" 
 #bindsym XF86Sleep exec i3lock -i image.png 
 #bindsym XF86Sleep exec i3lock-fancy -g -p
@@ -284,11 +284,6 @@ client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
 
 #client.background       #ffffff
 
-exec_always "/home/access/.screenlayout/default.sh"
-#exec_always xrandr --output eDP-1 --off --output HDMI-1 --primary --mode 1920x1080 --pos 0x0 --rotate normal
-#exec xrandr --primary --output HDMI-1 --auto 
-#exec _always xrandr --output eDP-1 --auto --primary --output HDMI-1 --auto --same-as eDP-1 --scale-from 1920x1080
-
 # 
 # Background
 # exec_always feh --bg-scale /etc/git/dotfiles/.../wallpaper.png
@@ -310,7 +305,20 @@ exec_always "/home/access/.screenlayout/default.sh"
 # install icon theme (nerd-fonts-complete)
 
 #exec_always compton
+
+# TODO: Move everything below to a script that waits 
+#exec_always "/home/access/.config/desktop-config.sh"
+
+# exec_always "/home/access/.screenlayout/default.sh"
+exec_always xrandr --output HDMI-1 --primary --mode 1920x1080 --pos 0x0 --rotate normal --output eDP-1 --off
+#exec_always xrandr --output eDP-1 --off --output HDMI-1 --primary --mode 1920x1080 --pos 0x0 --rotate normal
+#exec xrandr --primary --output HDMI-1 --auto 
+#exec _always xrandr --output eDP-1 --auto --primary --output HDMI-1 --auto --same-as eDP-1 --scale-from 1920x1080
+
 exec_always picom --config /etc/xdg/picom.conf
 exec_always --no-startup-id feh --bg-scale /etc/git/dotfiles/ArchLinux-Grout/backgrounds/mountains-stars-space-planets-digital-art-artwork-4k-0i.jpg
+exec pulseaudio
 exec pasystray
+exec jack_control start
 exec flameshot
+

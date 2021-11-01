@@ -1,0 +1,17 @@
+#!/bin/sh
+
+that() {
+	exec /usr/bin/pasystray &
+}
+this() {
+	exec /usr/bin/pkill pasystray
+	exec /usr/bin/pulseaudio -k
+	exec /usr/bin/pulseaudio --start
+	return 1
+}
+
+exec /usr/bin/i3lock -n --color #E53935
+ret=this
+if [ ret ]; then
+	that
+fi
