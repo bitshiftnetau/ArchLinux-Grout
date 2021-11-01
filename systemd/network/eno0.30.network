@@ -1,0 +1,8 @@
+[Match]
+Name=eno0.30
+
+[Network]
+DHCP=yes
+
+#[Address]
+#Address=10.0.30.10/24

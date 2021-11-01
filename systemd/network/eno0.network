@@ -1,0 +1,5 @@
+[Match]
+Name=eno0
+
+[Network]
+VLAN=eno0.30
