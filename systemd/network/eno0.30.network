@@ -2,7 +2,10 @@
 Name=eno0.30
 
 [Network]
-DHCP=yes
+DHCP=no
 
-#[Address]
-#Address=10.0.30.10/24
+[Address]
+Address=10.0.30.10/24
+
+[Route]
+Gateway=10.0.30.200
