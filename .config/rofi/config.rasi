@@ -1,14 +1,10 @@
 configuration {
-	display-drun: " ";
-	display-run: " ";
-	display-window: " ";
-	display-ssh: " ";
 	show-icons: true;
 	sidebar-mode: false;
 }
 
 * {
-    background-color:      #2f343f;
+    background-color:      "#2f343f";
     text-color:            White;
     font:                 "DejaVu Sans Mono 12";
 }
@@ -31,8 +27,9 @@ entry {
 element {
     padding: 5px 5px;
 }
+
 element selected {
-    background-color: #6a10bb;
+    background-color: "#6a10bb";
 }
 
 

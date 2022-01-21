@@ -1,5 +1,5 @@
 [NetDev]
-Name=eno0.30
+Name=enp1s0.30
 Kind=vlan
 
 [VLAN]

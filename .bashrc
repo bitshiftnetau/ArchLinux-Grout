@@ -9,5 +9,3 @@ alias ls='ls --color=auto'
 alias tlmgr='/usr/bin/tllocalmgr'
 alias clear='/usr/bin/clear && /usr/bin/neofetch'
 PS1='[\W]\$ '
-
-neofetch
